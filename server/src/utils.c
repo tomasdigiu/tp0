@@ -21,7 +21,7 @@ int iniciar_servidor(void)
 
 	// Asociamos el socket a un puerto
 
-	//err = setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEPORT, $(int){1}, sizeof(int));
+	err = setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEPORT, $(int){1}, sizeof(int));
 	bind(socket_servidor, servinfo->ai_addr, servinfo->ai_addrlen);
 
 	// Escuchamos las conexiones entrantes
